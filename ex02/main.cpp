@@ -6,12 +6,12 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 23:36:45 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/12/27 23:42:03 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/12/28 17:24:52 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
 #include <iostream>
-#include <Array.hpp>
 
 #define MAX_VAL 750
 int main(int, char**)
