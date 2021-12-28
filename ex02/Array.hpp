@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 23:36:43 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/12/28 17:24:31 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/12/28 17:26:52 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ARRAY_HPP
 # include <iostream>
 
-template <typename T = void>
+template <typename T>
 class Array
 {
 
