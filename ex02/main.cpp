@@ -6,12 +6,13 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 23:36:45 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/12/28 17:24:52 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/12/29 19:34:19 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 #include <iostream>
+#include <cstdlib>
 
 #define MAX_VAL 750
 int main(int, char**)
@@ -61,6 +62,34 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+
+    Array<long> test;
+    Array<long> test2 = test;
+    Array<long> test3(test2);
+    (void)test3;
+
+    Array<long> test4(10);
+    try
+    {
+        for (int i = 0; i < 15; i++) //15 is on purpose
+        {
+            const int value = rand();
+            test4[i] = value;
+        }
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
+    Array<long> test5 = test4;
+    Array<long> test6(test5);
+
+    test4[5] = 50;
+    std::cout << "test4[5] = " << test4[5] << std::endl;
+    std::cout << "test5[5] = " << test5[5] << std::endl;
+    std::cout << "test6[5] = " << test6[5] << std::endl;
+    std::cout << "test4.size() = " << test4.size() << std::endl;
     return 0;
 }
 

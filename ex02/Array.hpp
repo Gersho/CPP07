@@ -6,7 +6,7 @@
 /*   By: kzennoun <kzennoun@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/27 23:36:43 by kzennoun          #+#    #+#             */
-/*   Updated: 2021/12/28 17:26:52 by kzennoun         ###   ########lyon.fr   */
+/*   Updated: 2021/12/29 19:22:00 by kzennoun         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,23 @@ class Array
 
 	Array(unsigned int n): _size(n)
 	{
-		_array = new T[n]();
+		if (n)
+			_array = new T[n]();
+		else
+			_array = NULL;
 	}
 
 	Array(const Array & src)
 	{
 		_array = NULL;
 		*this = src;
+	}
+
+
+	~Array()
+	{
+		if (_array)
+			delete[] _array;
 	}
 
 	Array & operator=(Array const & rhs)
